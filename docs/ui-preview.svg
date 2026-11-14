@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">FlexbarPower 菜单栏面板界面示意</title>
+  <desc id="desc">深色 macOS 风格控制面板，包含 Flexbar 电源开关、重启按钮、解锁自动开机和锁屏自动断电。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#000" flood-opacity=".32"/>
+    </filter>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#303030"/><stop offset="1" stop-color="#292929"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#1681ff"/><stop offset="1" stop-color="#0865d8"/>
+    </linearGradient>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; }
+      .primary { fill: #f5f5f7; }
+      .secondary { fill: #a4a4a7; }
+      .rule { stroke: #555; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <rect width="900" height="620" rx="28" fill="#17191c"/>
+  <g filter="url(#shadow)">
+    <rect x="88" y="44" width="724" height="532" rx="27" fill="url(#panel)" stroke="#666" stroke-width="2"/>
+    <path d="M432 45l18-23 18 23" fill="#303030" stroke="#666" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+  <circle cx="153" cy="112" r="22" fill="#28d252"/>
+  <path d="M140 117l10-13 9 6 10-7-4 15-9-5-9 6z" fill="#173122"/>
+  <text x="188" y="121" class="primary" font-size="31" font-weight="650">FlexbarPower</text>
+  <text x="735" y="118" class="secondary" font-size="19" font-weight="600">退出</text>
+
+  <text x="126" y="191" class="primary" font-size="25" font-weight="600">Flexbar 电源</text>
+  <text x="126" y="224" class="secondary" font-size="19">当前已开启</text>
+  <rect x="706" y="173" width="84" height="44" rx="22" fill="#0878ec"/>
+  <circle cx="767" cy="195" r="18" fill="#f3f3f3"/>
+  <line x1="126" y1="260" x2="774" y2="260" class="rule"/>
+
+  <text x="126" y="310" class="primary" font-size="25" font-weight="600">重启 Flexbar</text>
+  <text x="126" y="344" class="secondary" font-size="19">断电 3 秒后恢复供电</text>
+  <rect x="695" y="286" width="95" height="44" rx="12" fill="url(#blue)"/>
+  <text x="742.5" y="316" text-anchor="middle" class="primary" font-size="21" font-weight="600">重启</text>
+  <line x1="126" y1="386" x2="774" y2="386" class="rule"/>
+
+  <text x="126" y="433" class="primary" font-size="19" font-weight="500">跟随系统唤醒自动开机</text>
+  <rect x="754" y="411" width="23" height="23" rx="5" fill="#1678ed" stroke="#62a3ff"/>
+  <path d="M760 423l5 5 8-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="126" y="489" class="primary" font-size="19" font-weight="500">跟随系统锁屏自动断电</text>
+  <rect x="754" y="467" width="23" height="23" rx="5" fill="#444" stroke="#777"/>
+
+  <text x="450" y="606" text-anchor="middle" fill="#8e8e93" font-size="13">FlexbarPower · 菜单栏界面示意</text>
+</svg>
