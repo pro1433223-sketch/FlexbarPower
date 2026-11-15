@@ -76,9 +76,16 @@ uhubctl -l 2-1 -p 2 -a cycle -d 3
 
 ```sh
 ./Scripts/build.sh
+./Scripts/package-zip.sh
 ```
 
-构建产物位于 `build/FlexbarPower.app`。构建脚本会生成菜单栏应用、root 辅助程序、LaunchDaemon 配置，并对应用包做本机 ad-hoc 签名。它不会自动安装到 `/Applications` 或写入系统目录。
+应用包位于 `build/FlexbarPower.app`，ZIP 位于 `artifacts/FlexbarPower-0.1.0-macOS-arm64.zip`。构建脚本会生成菜单栏应用、root 辅助程序、LaunchDaemon 配置，并对应用包做本机 ad-hoc 签名。它不会自动安装到 `/Applications` 或写入系统目录。
+
+## 下载与安装
+
+从 GitHub 的 **Releases** 下载 `FlexbarPower-0.1.0-macOS-arm64.zip`，解压后将 FlexbarPower 拖到“应用程序”文件夹。首次启动时需要管理员密码，应用用它安装上述辅助程序。安装前请确认 Flexbar 接在 `2-1` 的 2 号端口。
+
+此安装包为 ad-hoc 签名，尚未使用 Apple Developer ID 签名或公证。macOS Gatekeeper 可能拦截首次启动；该发布包不应被当作经过 Apple 公证的发行版。应用及其管理员辅助程序的源码均在仓库中，授权前请先审阅。
 
 ## 目录结构
 
@@ -94,6 +101,7 @@ Resources/
   FlexbarPower.svg                图标矢量源文件
 Scripts/
   build.sh                        本地构建脚本
+  package-zip.sh                  生成保留 macOS 应用元数据的 ZIP 包
 docs/
   ui-preview.svg                  菜单栏面板界面示意
 ```
